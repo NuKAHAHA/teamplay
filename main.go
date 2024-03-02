@@ -9,8 +9,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 w.Write([]byte("Hello from Snippetbox"))
 }
 func main() {
-// Use the http.NewServeMux() function to initialize a new servemux, then
-// register the home function as the handler for the "/" URL pattern.
+
 mux := http.NewServeMux()
 mux.HandleFunc("/", home)
 log.Println("Starting server on :4000")
